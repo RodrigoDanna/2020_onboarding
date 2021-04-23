@@ -2,21 +2,13 @@
   "name": "core",
   "version": "1.0.0",
   "description": "core layer from 2020 onboarding project",
+  "author": "Rodrigo R. Danna",
   "main": "index.js",
   "keywords": [
     "api",
     "axios",
     "typescript"
   ],
-  "scripts": {
-    "build": "webpack --config=webpack.config.js --mode=production"
-  },
-  "author": "Rodrigo R. Danna",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RodrigoDanna/2020_onboarding/issues"
-  },
-  "homepage": "https://github.com/RodrigoDanna/2020_onboarding#readme",
   "devDependencies": {
     "typescript": "^4.2.4",
     "webpack-cli": "^4.6.0"
@@ -25,5 +17,8 @@
     "axios": "^0.21.1",
     "ts-loader": "^9.1.0",
     "webpack": "^5.35.0"
+  },
+  "scripts": {
+    "build": "webpack --config=webpack.config.js --mode=production"
   }
 }
