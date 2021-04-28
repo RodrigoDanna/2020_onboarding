@@ -1,0 +1,35 @@
+.header{
+    position: relative;
+    width: 100%;
+    padding:@gutter-v @gutter-h;
+    background: @main-color;
+    display: flex;
+    min-height: 100px;
+    vertical-align: center;
+    justify-content: space-between;
+    box-shadow: 0 0 22px #000;
+    z-index:100;
+
+    .logo{
+        margin-right:@gutter-h;
+        max-width: 200px;
+        width: 30%;
+        min-width: 120px;
+    }
+
+    .input{
+        width: 66%;
+        height: 50px;
+        max-width: calc(~'100% - 400px');
+        max-width: 1020px;
+        padding:@gutter-v;
+        border-radius: @border-radius;
+        border:1px solid @border-color;
+        transition: @transition;
+        margin: auto;
+
+        &:focus{
+            border-radius: (@border-radius/2);
+        }
+    }
+}

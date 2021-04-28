@@ -1,0 +1,33 @@
+.card{
+    cursor: pointer;
+    &:last-child{
+        margin-bottom:@gutter-v;
+    }
+
+    .image{
+        position: relative;
+        display:block;
+        width: 100%;
+        background:@white;
+        margin-bottom:5px;
+
+        &:before{
+            content: '';
+            padding-bottom: 100%;
+            display:block;
+        }
+    }
+
+    .info{
+        color:@white;
+        text-align: left;
+
+        b, span{
+            display:block;
+            max-width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+.aside{
+    position: relative;
+    width:33%;
+    min-width: 200px;
+    max-width: 400px;
+    height:100%;
+    background:@main-color;
+    padding:(@gutter-v*2) @gutter-h;
+
+    .infos{
+        text-align: left;
+        margin-bottom:(@gutter-v*2);
+
+        .info-item{
+            margin-bottom:(@gutter-v/2);
+            color:@white;
+        }
+    }
+
+    .button{
+        background:@button-color;
+        border:1px solid @border-color;
+        border-radius: @border-radius;
+        text-decoration: none;
+        color:@white;
+        display:flex;
+        width:180px;
+        max-width: 100%;
+        height: 46px;
+        margin-bottom:(@gutter-v/2);
+        align-items: center;
+        justify-content: center;
+        transition: @transition;
+        
+        .icon{
+            width: 25px;
+            margin-right:8px;
+        }
+
+        span{
+            margin-top:-2px;
+        }
+
+        &:hover{
+            border-color:darken(@border-color, 10%);
+            background:darken(@button-color, 5%);
+        }
+    }
+
+    .image{
+        position: absolute;
+        bottom:0px;
+        left:0px;
+        width: 100%;
+        user-select: none;
+        pointer-events: none;
+
+        .artist-image{
+            position: relative;
+            width: 100%;
+            z-index:1;
+            opacity: 30%;
+            margin-bottom:-5px;
+        }
+
+        &:before{
+            content: '';
+            position: absolute;
+            top:0px;
+            left:0px;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(@main-color 0%, transparent 100%);
+            z-index:2;
+        }
+    }
+}

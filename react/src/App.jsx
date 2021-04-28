@@ -1,15 +1,17 @@
 import React from 'react';
-
-//CSS
 import './assets/css/App.css';
 
 //Components
-import Card from './components/Card.jsx';
+import Header from './components/Header.jsx';
+import Aside from './components/Aside.jsx';
+import List from './components/List.jsx';
 
 export default () => (
-    <div className="App">
-    {
-        <Card></Card>
-    }
+    <div className="app">
+        <Header></Header>
+        <div className="main-container">
+            <Aside></Aside>
+            <List></List>
+        </div>
     </div>
 )

@@ -1,5 +1,10 @@
 import React from 'react'
-import './../assets/css/Card.css';
 
 export default props =>
-    <div className="Card"></div>
+    <div className="card">
+        <div className="image"></div>
+        <div className="info">
+            <b className="title">{props.title}</b>
+            <span className="artist">{props.artist}</span>
+        </div>
+    </div>
