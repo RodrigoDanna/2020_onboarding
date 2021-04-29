@@ -3,17 +3,24 @@
   "version": "1.0.0",
   "description": "react layer from 2020 onboarding project",
   "author": "Rodrigo R. Danna",
-  "main": "index.js",
+  "main": "index.tsx",
   "keywords": [
     "react",
     "typescript"
   ],
   "devDependencies": {
-    "grunt": "^1.4.0",
-    "grunt-contrib-less": "^3.0.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "jit-grunt": "^0.10.0",
-    "typescript": "^4.2.4"
+    "@types/react": "^17.0.4",
+    "@types/react-dom": "^17.0.3",
+    "file-loader": "^6.1.1",
+    "html-webpack-plugin": "^4.5.2",
+    "less": "^4.1.1",
+    "less-loader": "^7.3.0",
+    "svg-url-loader": "^7.1.1",
+    "ts-loader": "^8.2.0",
+    "typescript": "^4.2.4",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.1"
   },
   "dependencies": {
     "react": "^17.0.1",
@@ -21,7 +28,7 @@
     "react-scripts": "4.0.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "webpack serve --config webpack.dev.js --open",
     "build": "react-scripts build"
   },
   "browserslist": {

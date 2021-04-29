@@ -1,6 +1,6 @@
-import React from 'react'
+import * as React from "react"
 
-export default props =>
+export default (props: { image: string; title: string; artist: string }) =>
     <div className="card">
         <div className="image"></div>
         <div className="info">

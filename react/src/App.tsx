@@ -1,10 +1,10 @@
-import React from 'react';
-import './assets/css/App.css';
+import * as React from "react";
+import './assets/less/App.less';
 
 //Components
-import Header from './components/Header.jsx';
-import Aside from './components/Aside.jsx';
-import List from './components/List.jsx';
+import Header from './components/Header';
+import Aside from './components/Aside';
+import List from './components/List';
 
 export default () => (
     <div className="app">

@@ -1,6 +1,6 @@
-import React from 'react'
+import * as React from "react"
 
-export default props => {
+export default (props: { title: string; value: string }) => {
     return (
         <div className="info-item">
             <b>{props.title}: </b>
