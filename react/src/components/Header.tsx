@@ -3,6 +3,8 @@ import { Component } from 'react';
 
 import Logo from '../assets/svg/logo.svg';
 
+import '../assets/less/Header.less';
+
 export default class Header extends Component {
     state: { search: string; };
 

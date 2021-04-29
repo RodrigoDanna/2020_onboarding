@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import Card from './Card'
 
+import '../assets/less/List.less';
+
 export default class List extends Component {
 
     constructor(props: {} | Readonly<{}>) {

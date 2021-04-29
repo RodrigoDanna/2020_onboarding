@@ -1,5 +1,7 @@
 import * as React from "react"
 
+import '../assets/less/Card.less';
+
 export default (props: { image: string; title: string; artist: string }) =>
     <div className="card">
         <div className="image"></div>

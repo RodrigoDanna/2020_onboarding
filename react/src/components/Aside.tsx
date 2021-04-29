@@ -4,6 +4,8 @@ import InfoItem from './InfoItem';
 import Play from '../assets/svg/play.svg';
 import ArtistImage from '../assets/svg/ozzy.jpg';
 
+import '../assets/less/Aside.less';
+
 export default (props: any) => {
     return (
         <aside className="aside">

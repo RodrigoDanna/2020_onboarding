@@ -1,4 +1,4 @@
-# moviee
+# 2020 Onboarding Project
 2020 onboarding project using a music api from rapidapi.com [api link](https://rapidapi.com/deezerdevs/api/deezer-1?endpoint=53aa5085e4b07e1f4ebeb429)
 
 # Technologies
