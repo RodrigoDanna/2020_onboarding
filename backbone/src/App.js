@@ -2,12 +2,13 @@ define([
     'jquery',
     'core_bundle',
     'Collections/ResultsCollection',
-    'Views/MainView'
+    'Views/MainView',
+    'react_bundle',
 ], ($, Core, ResultsCollection, MainView) => {
 
     const results = new ResultsCollection();
 
-    const mainView = new (MainView())
+    const mainView = new (MainView());
     mainView.render();
 
     window.addEventListener('requestResultsList', (e) => {

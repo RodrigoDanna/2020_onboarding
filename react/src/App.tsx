@@ -39,6 +39,7 @@ export default class App extends Component<Props> {
         this.setState({
             search: e.target.value
         })
+        //TODO: timeout para não buscar direto, deixar 1-2seg
         window.dispatchEvent(
             new CustomEvent('requestResultsList', {
                 detail: {

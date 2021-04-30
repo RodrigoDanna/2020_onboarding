@@ -1,5 +1,5 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as React from "react"
+import * as ReactDOM from "react-dom"
 import eminemTracks from './mocks/eminem.json'
 
 import App from './App'
@@ -22,7 +22,6 @@ ReactDOM.render(
       )
     }
     window.addEventListener('requestResultsList', (e: any) => {
-      console.log('ouviu requestResultsList');
       getTracks(e.detail.inputSearch);
     })
     setTimeout(() => {

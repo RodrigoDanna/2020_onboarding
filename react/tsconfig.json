@@ -3,7 +3,7 @@
     "compilerOptions": {
         "allowJs": true,
         "allowSyntheticDefaultImports": true,
-        "baseUrl": "./src",
+        "baseUrl": ".",
         "esModuleInterop": true,
         "isolatedModules": true,
         "jsx": "react",

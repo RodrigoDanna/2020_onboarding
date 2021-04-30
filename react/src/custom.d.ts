@@ -3,3 +3,7 @@ declare module "*.png";
 declare module "*.jpeg";
 declare module "*.gif";
 declare module "*.svg";
+declare module '*.less' {
+  const resource: string;
+  export = resource;
+}
