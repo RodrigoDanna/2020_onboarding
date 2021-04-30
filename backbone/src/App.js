@@ -2,22 +2,20 @@ define([
     'jquery',
     'core_bundle',
     'Collections/ResultsCollection',
-    'Views/HomeView'
-], ($, Core, ResultsCollection, HomeView) => {
+    'Views/MainView'
+], ($, Core, ResultsCollection, MainView) => {
 
     const results = new ResultsCollection();
 
-    const homeView = new (HomeView())({
+    const mainView = new (MainView())({
         el: $('#root')
     })
 
     window.addEventListener('requestResultsList', (e) => {
-        console.log('ouviu requestResultsList');
         let inputSearch = e.detail.inputSearch;
 
         Core.default.getData(inputSearch).then((response) => {
             results.reset(response.data)
-            console.log('dispatch setResultsItems');
 
             window.dispatchEvent(
                 new CustomEvent('setResultsItems', {
