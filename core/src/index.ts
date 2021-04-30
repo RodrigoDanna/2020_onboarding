@@ -1,44 +1,44 @@
-import axios, {AxiosInstance} from "axios";
+import axios, { AxiosInstance } from "axios";
 
 interface ResultItemInterface {
-  id:number,
-  readable:boolean,
-  title:string,
-  title_short:string,
-  title_version:string,
-  link:string,
-  duration:number,
-  rank:number,
-  explicit_lyrics:boolean,
-  explicit_content_lyrics:number,
-  explicit_content_cover:number,
-  preview:string,
-  md5_image:string,
-  artist:{
-    id:number,
-    name:string,
-    link:string,
-    picture:string,
-    picture_small:string,
-    picture_medium:string,
-    picture_big:string,
-    picture_xl:string,
-    tracklist:string,
-    type:string
+  id: number,
+  readable: boolean,
+  title: string,
+  title_short: string,
+  title_version: string,
+  link: string,
+  duration: number,
+  rank: number,
+  explicit_lyrics: boolean,
+  explicit_content_lyrics: number,
+  explicit_content_cover: number,
+  preview: string,
+  md5_image: string,
+  artist: {
+    id: number,
+    name: string,
+    link: string,
+    picture: string,
+    picture_small: string,
+    picture_medium: string,
+    picture_big: string,
+    picture_xl: string,
+    tracklist: string,
+    type: string
   },
-  album:{
-    id:number,
-    title:string,
-    cover:string,
-    cover_small:string,
-    cover_medium:string,
-    cover_big:string,
-    cover_xl:string,
-    md5_image:string,
-    tracklist:string,
-    type:string
+  album: {
+    id: number,
+    title: string,
+    cover: string,
+    cover_small: string,
+    cover_medium: string,
+    cover_big: string,
+    cover_xl: string,
+    md5_image: string,
+    tracklist: string,
+    type: string
   },
-  type:string
+  type: string
 }
 
 const instance = axios.create({
@@ -53,26 +53,14 @@ const instance = axios.create({
 
 export default {
   getData(inputSearch: string, index: number): Promise<void | ResultItemInterface> {
-    
-      const options = {
-          params: {
-            q: inputSearch, 
-            index: index
-          }
-      };
 
-      async function configure(): Promise<AxiosInstance> {
-        return instance.request(options).then(response => {
-          return response;
-        }).catch(error => {
-          return error;
-        });
+    const options = {
+      params: {
+        q: inputSearch,
+        index: index
       }
+    };
 
-      return configure().then(async (api) => {
-          return await api.get('').then(response => {
-              return response.data
-          })
-      })
+    return instance.request(options).then(response => response.data).catch(error => error);
   }
 }

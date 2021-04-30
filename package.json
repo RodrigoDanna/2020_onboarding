@@ -1,0 +1,22 @@
+{
+  "name": "2020_onboarding",
+  "version": "1.0.0",
+  "description": "2020 onboarding project using a music api from rapidapi.com [api link](https://rapidapi.com/deezerdevs/api/deezer-1?endpoint=53aa5085e4b07e1f4ebeb429)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RodrigoDanna/2020_onboarding.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RodrigoDanna/2020_onboarding/issues"
+  },
+  "homepage": "https://github.com/RodrigoDanna/2020_onboarding#readme",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}

@@ -7,20 +7,25 @@ define([
 
     const results = new ResultsCollection();
 
-    const homeView = new(HomeView())({
+    const homeView = new (HomeView())({
         el: $('#root')
     })
 
     window.addEventListener('requestResultsList', (e) => {
+        console.log('ouviu requestResultsList');
         let inputSearch = e.detail.inputSearch;
 
         Core.default.getData(inputSearch).then((response) => {
-            results.reset(response)
+            results.reset(response.data)
+            console.log('dispatch setResultsItems');
 
             window.dispatchEvent(
                 new CustomEvent('setResultsItems', {
                     detail: {
-                        results: results.toJSON(),
+                        results: {
+                            total: response.total,
+                            data: results.toJSON()
+                        },
                         inputSearch: inputSearch
                     },
                 })

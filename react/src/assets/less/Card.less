@@ -2,8 +2,17 @@
 
 .card{
     cursor: pointer;
+
     &:last-child{
         margin-bottom:@gutter-v;
+    }
+
+    &.active{
+        .image{
+            &:after{
+                border-color:@white;
+            }
+        }
     }
 
     .image{
@@ -12,11 +21,31 @@
         width: 100%;
         background:@white;
         margin-bottom:5px;
+        overflow: hidden;
+
+        &:after{
+            content: '';
+            border:2px solid transparent;
+            width: calc(~'100% - 4px');
+            height: calc(~'100% - 4px');
+            position: absolute;
+            top:0px;
+            left:0px;
+            transition: 0.1s;
+        }
 
         &:before{
             content: '';
             padding-bottom: 100%;
             display:block;
+        }
+
+        img{
+            position: absolute;
+            top:0%;
+            left:0%;
+            max-width: 100%;
+            max-height: 100%;
         }
     }
 

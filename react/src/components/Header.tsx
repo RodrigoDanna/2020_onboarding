@@ -5,23 +5,12 @@ import Logo from '../assets/svg/logo.svg';
 
 import '../assets/less/Header.less';
 
-export default class Header extends Component {
-    state: { search: string; };
+type Props = {
+    search?: string,
+    changeFunction: any
+}
 
-    constructor(props: {} | Readonly<{}>) {
-        super(props)
-
-        this.state = {
-            search: ''
-        }
-    }
-
-    changeValue = (value: string) => {
-        this.setState({
-            search: value
-        })
-    }
-
+export default class Header extends Component<Props> {
     render() {
 
         return (
@@ -30,9 +19,9 @@ export default class Header extends Component {
                 <input
                     className="input"
                     type="text"
-                    value={this.state.search}
+                    value={this.props.search}
                     placeholder='Search by artist, song or album...'
-                    onChange={e => this.changeValue(e.target.value)}
+                    onChange={this.props.changeFunction}
                 />
             </header>
         )
