@@ -43,7 +43,7 @@ interface ResultItemInterface {
 
 const instance = axios.create({
   baseURL: 'https://deezerdevs-deezer.p.rapidapi.com/search',
-  timeout: 1000,
+  timeout: 10000,
   headers: {
     'x-rapidapi-key': '48a6edf938mshdd048f9559b763bp1c9058jsn31233ed21ade',
     'x-rapidapi-host': 'deezerdevs-deezer.p.rapidapi.com',

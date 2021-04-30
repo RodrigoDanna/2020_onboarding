@@ -7,9 +7,8 @@ define([
 
     const results = new ResultsCollection();
 
-    const mainView = new (MainView())({
-        el: $('#root')
-    })
+    const mainView = new (MainView())
+    mainView.render();
 
     window.addEventListener('requestResultsList', (e) => {
         let inputSearch = e.detail.inputSearch;
@@ -20,11 +19,11 @@ define([
             window.dispatchEvent(
                 new CustomEvent('setResultsItems', {
                     detail: {
+                        inputSearch: inputSearch,
                         results: {
                             total: response.total,
                             data: results.toJSON()
-                        },
-                        inputSearch: inputSearch
+                        }
                     },
                 })
             )

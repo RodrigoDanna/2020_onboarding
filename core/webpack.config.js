@@ -8,10 +8,12 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
     },
     module: {
-        rules: [{
-            test: /\.tsx?$/,
-            use: 'ts-loader',
-        }, ],
+        rules: [
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+            },
+        ],
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
