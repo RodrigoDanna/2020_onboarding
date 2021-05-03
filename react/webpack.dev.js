@@ -20,7 +20,7 @@ module.exports = {
                 use: 'ts-loader',
             },
             {
-                test: /\.less$/i,
+                test: /\.(less|css)$/i,
                 use: [
                     'style-loader',
                     'css-loader',

@@ -62,12 +62,16 @@
         user-select: none;
         pointer-events: none;
 
-        .artist-image{
+        .artist-image, .lazy-load-image-background{
             position: relative;
             width: 100%;
             z-index:1;
             opacity: 30%;
-            margin-bottom:-5px;
+            
+            img{
+                margin-bottom:-5px;
+                width: 100%;
+            }
         }
 
         &:before{

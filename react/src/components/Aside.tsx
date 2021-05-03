@@ -5,6 +5,9 @@ import Play from '../assets/svg/play.svg';
 
 import '../assets/less/Aside.less';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 export default (props: { selected: ItemInterface | null; }) => {
     return (
         <aside className="aside">
@@ -24,7 +27,11 @@ export default (props: { selected: ItemInterface | null; }) => {
                 </a>
 
                 <div className="image">
-                    <img className="artist-image" src={props.selected.artist.picture_medium} alt="Artist Image" />
+                    <LazyLoadImage
+                        alt={props.selected.artist.name}
+                        src={props.selected.artist.picture_medium}
+                        effect="blur"
+                    />
                 </div>
             </>
             }
