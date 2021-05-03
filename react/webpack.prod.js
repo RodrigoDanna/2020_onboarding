@@ -8,7 +8,7 @@ module.exports = {
     output: {
         filename: 'react_bundle.js',
         libraryTarget: 'amd',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'build'),
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
