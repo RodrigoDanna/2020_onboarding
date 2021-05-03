@@ -18,6 +18,7 @@ type AppState = {
     selected: ItemInterface | null
 }
 
+let dispatchTimer: NodeJS.Timeout | null;
 
 export const ThemeContext = React.createContext({
     setSelected: (e: any) => { }
@@ -39,14 +40,20 @@ export default class App extends Component<Props> {
         this.setState({
             search: e.target.value
         })
-        //TODO: timeout para não buscar direto, deixar 1-2seg
-        window.dispatchEvent(
-            new CustomEvent('requestResultsList', {
-                detail: {
-                    inputSearch: e.target.value
-                },
-            })
-        )
+
+        if (dispatchTimer !== null) {
+            clearTimeout(dispatchTimer);
+        }
+
+        dispatchTimer = setTimeout(() => {
+            window.dispatchEvent(
+                new CustomEvent('requestResultsList', {
+                    detail: {
+                        inputSearch: e.target.value
+                    },
+                })
+            )
+        }, 1000);
     }
 
     setSelected = (e: any) => {
