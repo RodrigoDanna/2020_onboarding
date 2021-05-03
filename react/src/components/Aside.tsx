@@ -18,10 +18,12 @@ export default (props: { selected: ItemInterface | null; }) => {
                     <InfoItem title="Album" value={props.selected.album.title} />
                     <InfoItem title="Duration" value={`${props.selected.duration} seconds`} />
                 </div>
-                <a href="" className="button play">
+
+                {/* <a href="" className="button play">
                     <img className="icon" src={Play} alt="Play Preview" />
                     <span>Play Preview</span>
-                </a>
+                </a> */}
+
                 <a href={props.selected.link} target="_blank" className="button link">
                     <span>See On Deezer</span>
                 </a>
