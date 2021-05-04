@@ -4,7 +4,8 @@
   "description": "2020 onboarding project using a music api from rapidapi.com [api link](https://rapidapi.com/deezerdevs/api/deezer-1?endpoint=53aa5085e4b07e1f4ebeb429)",
   "main": "index.js",
   "scripts": {
-    "build": "grunt"
+    "build": "grunt",
+    "run": "http-server -o ./backbone"
   },
   "repository": {
     "type": "git",

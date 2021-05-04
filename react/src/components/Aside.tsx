@@ -1,8 +1,6 @@
 import * as React from "react"
 import InfoItem from './InfoItem';
 
-import Play from '../assets/svg/play.svg';
-
 import '../assets/less/Aside.less';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -18,11 +16,6 @@ export default (props: { selected: ItemInterface | null; }) => {
                     <InfoItem title="Album" value={props.selected.album.title} />
                     <InfoItem title="Duration" value={`${props.selected.duration} seconds`} />
                 </div>
-
-                {/* <a href="" className="button play">
-                    <img className="icon" src={Play} alt="Play Preview" />
-                    <span>Play Preview</span>
-                </a> */}
 
                 <a href={props.selected.link} target="_blank" className="button link">
                     <span>See On Deezer</span>

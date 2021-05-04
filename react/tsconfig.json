@@ -1,6 +1,11 @@
 {
+    "ts-node": {
+        "transpileOnly": true
+    },
     "compileOnSave": true,
     "compilerOptions": {
+        "noImplicitAny": true,
+        "strictNullChecks": false,
         "allowJs": true,
         "allowSyntheticDefaultImports": true,
         "baseUrl": ".",
@@ -14,6 +19,11 @@
         "rootDir": "./",
         "strict": true,
         "target": "es6",
+        "lib": [
+            "es5",
+            "es6",
+            "dom"
+        ],
         "typeRoots": [
             "node_modules/@types"
         ],
