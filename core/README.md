@@ -1,4 +1,4 @@
-# Core
+# React
 Layer that will connect and expose the api
 
 # Technologies
